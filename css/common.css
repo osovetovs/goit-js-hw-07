@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+/* Task 1 */
+#categories,
+#categories > .item,
+#categories .item > ul,
+#categories .item > ul > li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 392px;
+  margin: 24px 0;
+}
+#categories .item {
+  background: #F6F6FE;
+  border-radius: 8px;
+  padding: 16px;
+}
+#categories .item > h2 {
+  margin: 0 0 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #1f2a37;
+}
+#categories .item > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#categories .item > ul > li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  background: #fff;
+  border: 1px solid #cfd3e0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #111;
+}
+
+/* Task 2 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+  margin: 24px auto;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gallery__item { width: 360px; }
+.gallery__img {
+  display: block;
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Task 3 */
+#name-input {
+  display: block;
+  width: 408px;
+  height: 56px;
+  margin: 24px 0 16px;
+  padding: 16px 24px;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+#name-input:hover,
+#name-input:focus { border-color: #000000; }
+
+h1 {
+  margin: 16px 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+  color: #2E2F42;
+}
+
+/* Task 4 */
+.login-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 14px rgba(0,0,0,.06);
+  width: 392px;
+  margin: 24px 0;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.login-form label {
+  display: grid !important;
+  grid-template-rows: auto 40px;
+  gap: 8px;
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.login-form input {
+  display: block !important;
+  width: 360px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.login-form input:hover,
+.login-form input:focus { border-color: #000000; }
+.login-form button[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  height: 40px;
+  min-width: 86px;
+  background: #4E75FF;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease, transform .02s;
+  font-family: 'Montserrat', sans-serif;
+}
+.login-form button[type="submit"]:hover { background: #6C8CFF; }
+.login-form button[type="submit"]:active { transform: translateY(1px); }
+
+/* Task 5 */
+.widget{
+  width: 480px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 2px 14px rgba(0,0,0,.06);
+  padding:24px;
+  margin:24px 0;
+  font-family:'Montserrat', sans-serif;
+}
+.widget p{
+  margin:0 0 16px;
+  font-size:24px;
+  line-height:32px;
+  letter-spacing:.04em;
+  color:#2b2f3a;
+  font-weight:400;
+}
+.widget .color{
+  font-weight:600;
+}
+.change-color{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:56px;
+  padding:0 24px;
+  min-width:240px;
+  border:0;
+  border-radius:8px;
+  background:#4E75FF;
+  color:#fff;
+  font-family:'Montserrat', sans-serif;
+  font-weight:600;
+  font-size:20px;
+  letter-spacing:.02em;
+  cursor:pointer;
+  transition:background-color .15s ease, transform .02s;
+}
+.change-color:hover{ background:#6C8CFF; }
+.change-color:active{ transform:translateY(1px); }
+
+/* Task 6 */
+#controls{
+  width: 486px;
+  background: #F6F6FE;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 16px;
+}
+#boxes{
+  width: 486px;
+  min-height: 134px;
+  background: #F6F6FE;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#controls input[type="number"]{
+  width: 150px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  transition: border-color .15s ease;
+}
+#controls input[type="number"]:hover,
+#controls input[type="number"]:focus{
+  border-color: #000000;
+}
+
+#controls [data-create]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #4E75FF;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease, transform .02s;
+}
+#controls [data-create]:hover{ background: #6C8CFF; }
+#controls [data-create]:active{ transform: translateY(1px); }
+
+#controls [data-destroy]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #FF4E4E;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease, transform .02s;
+}
+#controls [data-destroy]:hover{ background: #FF7070; }
+#controls [data-destroy]:active{ transform: translateY(1px); }
